@@ -141,9 +141,9 @@ $(document).ready(function () {
   var body = `
   <div id="container">
     <!-- Main Menu -->
-    <div id="main" class="chat-content position-relative" style="display:none">
+    <div id="main" class="chat-content main-view position-relative" style="display:none">
       <div class="main-container col-md-12 pt-3 pl-3 pr-3 pb-3">
-        <div class="row justify-content-end">
+        <div class="">
           <div id="minimize" class="text-right minimize-icon col-1">
           <i class="fa fa-minus white" aria-hidden="true" ></i>
           </div>
@@ -161,33 +161,27 @@ $(document).ready(function () {
           <p id="error" class="disclaimer"></p>
         </div>
       </div>
-      <div id="newQuestion" class="botButton  main-new-chat row mx-4" st>
-        <div class="col-10">
-          <p class="main-new-ask">Start a New Chat</p>
-        </div>
-        <div class="col-2 text-right">
-        
-          <img id="sendIcon" src="../assets/send.png"  class="SendImg"/>
-          <img class="float-right SendImg" id="sendIcon2" src="../assets/send-yellow.png" />
-        </div>
+      <div class="px-3 mb-5">
+      <div id="newQuestion"class="botButton mb-5 main-new-chat mx-4">
+       <div class="d-flex justify-content-center">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.0929 10.9711C23.0928 10.7748 22.9784 10.6032 22.8019 10.5315L7.87289 4.48078C7.68081 4.40296 7.4533 4.45718 7.30393 4.61646C7.15445 4.77567 7.11467 5.00598 7.20447 5.19277L10.3593 11.7517L7.21305 18.697C7.12357 18.8947 7.16363 19.1201 7.31323 19.2611L7.3135 19.2613C7.46317 19.402 7.69054 19.4283 7.88234 19.327L22.8025 11.4461C22.98 11.3523 23.0931 11.1669 23.0932 10.9709L23.0929 10.9711ZM8.71134 17.7756L11.2361 12.2024L14.1889 12.0213C14.4671 12.0043 14.6922 11.7648 14.6921 11.486C14.6921 11.2072 14.4666 10.9954 14.1883 11.0124L11.2353 11.1936L8.70365 5.93044L21.3967 11.0751L8.71134 17.7756Z" fill="white"/>
+          </svg>
+        <p class="main-new-ask mx-2">Start a New Chat</p>
+       </div>
+    </div>
+    <div id="prevChats" class="botBorderButton main-prev-chat mb-2 mx-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="main-prev-chat mx-2">Your Previous Chats</p>
+        <img src = "./assets/arrow-right.svg" class = "mx-3 mt-1"/>
       </div>
-      <div id="prevChats" class="botButton  main-prev-chat row mx-4 position-absolute">
-        <div class="col-10">
-          <p class="main-new-ask">Your Previous Chats</p>
-        </div>
-        <div class="col-2 text-right my-auto">
-          <img src="../assets/arrow-small.png" class="arrow-small" />
-          <img src="../assets/arrow-small-yellow.png" class="arrow-small-yellow" />
-        </div>
+    </div>
+    <div id="termsBtn" class=" botBorderButton main-terms mb-5 mx-4">
+      <div class="d-flex justify-content-between align-items-center">
+          <p class="main-prev-chat mx-2">Terms And Conditions</p>
+          <img src = "./assets/arrow-right.svg" class = "mx-3 mt-1"/>
       </div>
-      <div id="termsBtn" class=" botButton main-terms row mx-4 position-absolute">
-        <div class="col-10">
-            <p class="main-new-ask">Terms And Conditions</p>
-        </div>
-        <div class="col-2 text-right my-auto">
-          <img src="../assets/arrow-small.png" class="arrow-small" />
-          <img src="../assets/arrow-small-yellow.png" class="arrow-small-yellow" />
-        </div>
+    </div>
       </div>
     </div>
 
@@ -232,16 +226,9 @@ $(document).ready(function () {
     <!-- Chat Conversation -->
     <div id="chatConversation" class="chat-content position-relative" style="display:none">
       <div class="row chat-header m-auto justify-content-between">
-        <div class="col-9 my-auto pl-1 py-1">
-          <div id="goBack" class="go-back">
-            <img src="../assets/arrow-left-white.png" class="arrow-left-white mr-1" />
-            <img src="../assets/arrow-left-yellow.png" class="arrow-left-yellow mr-1" />
-            <span class="mb-0">Go Back</span>
-          </div>
-        </div>
-        <div class="row col-3">
+          <div class="row col-12 d-flex  justify-content-end">
           <div id="minimize3" class="text-right minimize-icon2 col-1">
-         <i class="fa fa-minus white" aria-hidden="true" ></i>
+        <i class="fa fa-minus white" aria-hidden="true" ></i>
           </div>
         <div id="closeIcon3" class="col-1 my-auto close-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="26.671" height="26.671" viewBox="0 0 26.671 26.671">
@@ -251,6 +238,28 @@ $(document).ready(function () {
           </svg>
         </div>
         </div>
+        <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between"">
+         <div class = "d-flex align-items-center">
+         <div id="goBack" class="p-2">
+         <img src = "./assets/back.svg"> 
+        </div>
+        <div>
+        <span class = "mx-2 fw-semibold">New Chat</span>
+        </div>
+         </div>
+         <div class="dropdown">
+          <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src = "./assets/more.svg"/>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item border-bottom" href="#">Download</a></li>
+            <li><a class="dropdown-item border-bottom" href="#">Delete</a></li>
+          </ul>
+        </div>
+
+
+        </div>
+        
         <div id="chatActions" class="w-100 d-none">
           <div class="row mx-0 my-2">
             <div id="deleteChat" class="col text-center chat-action-icon mx-2 py-1">
@@ -270,23 +279,25 @@ $(document).ready(function () {
        
         </div>
       </div>
-      <div class="col-md-12 p-2 input-container">
-        <div class="row">
-          <div class="col-10 col-md-11 pl-3">
-            <textarea rows={1} type="text" id="newmessage" class="message-input border-0 px-4" placeholder="Type your message!"
+      <div class="col-md-12 p-2 input-container bg-white">
+        <div class ="d-flex align-items-center ">
+        <img src = "./assets/add.svg" class="mx-2">
+        <img src = "./assets/mic.svg" class="mx-2">
+        <div class = "w-100">
+        <textarea rows={1} type="text" id="newmessage" class="message-input px-4 py-1" placeholder="Type your message!"
               style="font-size:18px;"></textarea>
             <input id="PromptResponse" name="PromptResponse" type="hidden" value="0" />
-          </div>
-          <div class="col-2 col-md-1 pl-2">
-            <div class="send-icon float-right">
-              <img src="../assets/e-icon.png" class="e-icon" />
-            </div>
-          </div>
         </div>
+        <div class="mx-2">
+        <img src="./assets/send.svg" />
+      </div>
+        </div>
+
+
       </div>
     </div>
     <!-- LoginScreen -->
-    <div id="LoginScreen"  class="chat-content position-relative" style="display:none">
+    <div id="LoginScreen"  class="chat-content login-view position-relative" style="display:none">
     
     <div id="closeIcon" class="text-right close-icon">
       <svg

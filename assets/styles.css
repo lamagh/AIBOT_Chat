@@ -45,7 +45,7 @@
 }
 
 #newQuestion:hover .main-new-ask {
-  color: #FBBE2C !important;
+  color: #0744E1 !important;
 }
 
 .chatbox-title {
@@ -121,7 +121,7 @@
 
 }
 .botButton{
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #0744E1 0% 0% no-repeat padding-box;
   border-radius: 33px;
   border: 1px solid #020A5826;
   width: -webkit-fill-available;
@@ -129,6 +129,17 @@
   /* height: 39px; */
   padding-top: 5px;
   padding-bottom: 5px;
+}
+.botBorderButton{
+  border-radius: 33px;
+  border: 1px solid #0744E1;
+  color: #0744E1;
+  width: -webkit-fill-available;
+  
+  width: -moz-available;
+  /* height: 39px; */
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 
@@ -147,8 +158,9 @@
 }
 
 .main-prev-chat {
-
-  bottom: 90px;
+  margin-bottom: 0;
+  font: bold 12px/20px Montserrat;
+  color: #0744E1;
 }
 
 .main-new-ask {
@@ -193,15 +205,15 @@
 
 .chat-content {
   background: #F6F8FF;
-  border: 1px solid #bcbed2;
-  border-radius: 24px;
+  
+  border-radius: 12px;
   margin-bottom: 14px;
   height: 500px;
   position: fixed !important;
     bottom: 150px;
     width: 530px;
     right: 22px;
-    box-shadow: 0px 4px 8px 4px rgba(0,0,0,.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .chats {
@@ -263,11 +275,12 @@
 }
 
 .message-input {
-  height: 30px;
+  height: 45px;
   top: 897px;
   left: 1186px;
   width: 100%;
-  background: #e5e6ee;
+  background: #fff;
+  border: 1px solid #E7E7E7 !important;
   border-radius: 36px;
   color: #020A58 !important;
   z-index: 11 !important;
@@ -277,6 +290,14 @@
 	overflow: hidden;
 	box-sizing: border-box;
   overflow-y: auto;
+}
+
+.login-view{
+  padding: 10px 30px;
+}
+
+.main-view{
+  padding: 10px 50px;
 }
 
 .terms {
@@ -296,7 +317,7 @@
 .chat-header {
   background: #9a9dbc 0% 0% no-repeat padding-box;
   color: #fff;
-  /* height: 50px; */
+  height: 70px;
   border-radius: 22px 22px 0px 0px;
   width: 100%;
 }
@@ -402,7 +423,8 @@
 
 .input-container {
   position: absolute;
-  bottom: 16px;
+  bottom: 0;
+    border-radius: 0 0 12px 12px;
 }
 
 .search-input {
@@ -633,7 +655,7 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5) {
   .chat-content{
-    max-height:417px !important;
+    max-height:420px !important;
     width: 670px !important;
   }
   .main-terms {
@@ -642,8 +664,7 @@
     bottom: 10px;
   }
   .main-new-chat {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 10px;
     bottom: 20px;
   }
   .main-prev-chat {
@@ -686,3 +707,5 @@ font-size: 12px !important;
     font: normal normal bold 15px/20px Montserrat;
   }
 }
+
+
