@@ -637,7 +637,7 @@ $(document).ready(function () {
             </div>
           </div>
         </div>
-        `;
+        `; //robot
           } else {
             div.innerHTML = `
           <div class="row justify-content-end message-container">
@@ -647,7 +647,7 @@ $(document).ready(function () {
               </div>
             </div>
           </div>
-          `;
+          `; //users
           }
           prmptOld = message?.chatprompt.toString();
           $("#fullchat").append(div);
@@ -743,7 +743,7 @@ function typeWriter(type = "HCT GPT") {
         </div>
       </div>
     </div>
-    `;
+    `; //robot
   } else {
     div.innerHTML = `
     <div class="row justify-content-end message-container">
@@ -753,7 +753,7 @@ function typeWriter(type = "HCT GPT") {
         </div>
       </div>
     </div>
-    `;
+    `; //users
   }
   $("#fullchat").append(div);
   $("#chatMain").scrollTop($(".chats")[0].scrollHeight);
