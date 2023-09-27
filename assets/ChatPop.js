@@ -163,22 +163,22 @@ $(document).ready(function () {
       </div>
       <div class="px-3 mb-5">
       <div id="newQuestion"class="botButton mb-5 main-new-chat mx-4">
-       <div class="d-flex justify-content-center">
+       <div class="d-flex justify-content-center align-items-center">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M23.0929 10.9711C23.0928 10.7748 22.9784 10.6032 22.8019 10.5315L7.87289 4.48078C7.68081 4.40296 7.4533 4.45718 7.30393 4.61646C7.15445 4.77567 7.11467 5.00598 7.20447 5.19277L10.3593 11.7517L7.21305 18.697C7.12357 18.8947 7.16363 19.1201 7.31323 19.2611L7.3135 19.2613C7.46317 19.402 7.69054 19.4283 7.88234 19.327L22.8025 11.4461C22.98 11.3523 23.0931 11.1669 23.0932 10.9709L23.0929 10.9711ZM8.71134 17.7756L11.2361 12.2024L14.1889 12.0213C14.4671 12.0043 14.6922 11.7648 14.6921 11.486C14.6921 11.2072 14.4666 10.9954 14.1883 11.0124L11.2353 11.1936L8.70365 5.93044L21.3967 11.0751L8.71134 17.7756Z" fill="white"/>
           </svg>
-        <p class="main-new-ask mx-2">Start a New Chat</p>
+        <p class="main-new-ask mx-2 fw-semibold">Start a New Chat</p>
        </div>
     </div>
     <div id="prevChats" class="botBorderButton main-prev-chat mb-2 mx-4">
       <div class="d-flex justify-content-between align-items-center">
-        <p class="main-prev-chat mx-2">Your Previous Chats</p>
+        <p class="main-prev-chat fw-medium mx-2">Your Previous Chats</p>
         <img src = "./assets/arrow-right.svg" class = "mx-3 mt-1"/>
       </div>
     </div>
     <div id="termsBtn" class=" botBorderButton main-terms mb-5 mx-4">
       <div class="d-flex justify-content-between align-items-center">
-          <p class="main-prev-chat mx-2">Terms And Conditions</p>
+          <p class="main-prev-chat fw-medium mx-2">Terms And Conditions</p>
           <img src = "./assets/arrow-right.svg" class = "mx-3 mt-1"/>
       </div>
     </div>
@@ -186,66 +186,80 @@ $(document).ready(function () {
     </div>
 
     <!-- Previous Conversations -->
-    <div id="previousConversations" class="chat-content position-relative" style="display:none">
+    <div id="previousConversations" class="chat-view position-relative" style="display:none">
       <div class="row chat-header m-auto justify-content-between">
-        <div class="col-2 my-auto pl-1 back-container py-1">
-          <div id="goBack2" class="go-back">
-            <img src="../assets/arrow-left-white.png" class="arrow-left-white mr-1" />
-            <img src="../assets/arrow-left-yellow.png" class="arrow-left-yellow mr-1" />
-            <span class="mb-0">Go Back</span>
+            <div class="row">
+            <div class = "d-flex align-items-center px-0 pt-2 justify-content-end">
+              <div id="minimize3" class="">
+              <img src = "./assets/max.svg">
+              </div>
+              <div id="minimize3" class="mx-2">
+              <img src = "./assets/mini.svg">
+              </div>
+              <div id="closeIcon3" class="">
+                <img src = "./assets/close.svg">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-5 my-auto">
-          <span class="mb-0 chatbox-title">YOUR PREVIOUS CHATS</span>
-        </div>
-        <div class="row">
-          <div id="minimize2" class="text-right minimize-icon2 col-1">
-          <i class="fa fa-minus white" aria-hidden="true" ></i>
+          <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between">
+           <div class="d-flex align-items-center">
+           <div id="goBack2" class="p-2">
+           <img src = "./assets/back.svg">
            </div>
-          <div id="closeIcon2" class="col-1 my-auto close-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26.671" height="26.671" viewBox="0 0 26.671 26.671">
-              <path id="create-account"
-                d="M17.737,8.085l-6.5-.122-.122-6.5A1.309,1.309,0,0,0,9.837.185L9,.169A1.2,1.2,0,0,0,7.777,1.4L7.9,7.9,1.4,7.779A1.2,1.2,0,0,0,.169,9.006l.016.833a1.309,1.309,0,0,0,1.275,1.275l6.5.122.122,6.5A1.309,1.309,0,0,0,9.36,19.012l.833.016A1.2,1.2,0,0,0,11.421,17.8L11.3,11.3l6.5.122a1.2,1.2,0,0,0,1.228-1.228l-.016-.832A1.31,1.31,0,0,0,17.737,8.085Z"
-                transform="translate(13.335 -0.239) rotate(45)" fill="#fff" />
-            </svg>
+           <span class="mx-2 fs-5 fw-medium">Your Previous Chats</span>
+            </div>
           </div>
-        </div>
+       
       </div>
-      <div id="prevChatsContainer" class="col-md-12 py-2 px-4">
-        <div class="position-relative search-input-container">
-        <textarea  rows={1} id="prevChatSearch" class="search-input" 
-            placeholder="Search For Asked Questions" ></textarea>
-          <img class="search-img search-blue" src="../assets/search-icon-blue.png" />
-          <img class="search-img search-yellow" src="../assets/search-icon-yellow.png" />
+      <div id="prevChatsContainer" class="col-md-12 py-2 px-4 ">
+        <div class="position-relative search-input-container mt-2 mb-3">
+        <textarea rows={1} id="prevChatSearch" class="search-input fw-normal d-flex" 
+            placeholder="Search Chat" ></textarea>
         </div>
         <div id="prevContainer">
+          <div class = "d-flex justify-content-between align-items-center border-bottom py-3">
+              <div class = "d-flex align-items-center">
+               <img src ="./assets/chat.svg"/>
+               <p class = "mx-2 m-0 fw-medium fs-7 d-inline-block text-truncate" style="max-width: 90%;">What are some effective ways to reduce stress and anxiety?</p>
+              </div>
+              <div class="dropdown">
+              <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src = "./assets/more.svg"/ class = "blk">
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item border-bottom" href="#">Download</a></li>
+                <li><a class="dropdown-item border-bottom" href="#">Delete</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Chat Conversation -->
-    <div id="chatConversation" class="chat-content position-relative" style="display:none">
+    <div id="chatConversation" class="chat-view position-relative" style="display:none">
       <div class="row chat-header m-auto justify-content-between">
-          <div class="row col-12 d-flex  justify-content-end">
-          <div id="minimize3" class="text-right minimize-icon2 col-1">
-        <i class="fa fa-minus white" aria-hidden="true" ></i>
+          <div class="row">
+            <div class = "d-flex align-items-center px-0 pt-2 justify-content-end">
+              <div id="minimize3" class="">
+              <img src = "./assets/max.svg">
+              </div>
+              <div id="minimize3" class="mx-2">
+              <img src = "./assets/mini.svg">
+              </div>
+              <div id="closeIcon3" class="">
+                <img src = "./assets/close.svg">
+              </div>
+            </div>
           </div>
-        <div id="closeIcon3" class="col-1 my-auto close-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26.671" height="26.671" viewBox="0 0 26.671 26.671">
-            <path id="create-account"
-              d="M17.737,8.085l-6.5-.122-.122-6.5A1.309,1.309,0,0,0,9.837.185L9,.169A1.2,1.2,0,0,0,7.777,1.4L7.9,7.9,1.4,7.779A1.2,1.2,0,0,0,.169,9.006l.016.833a1.309,1.309,0,0,0,1.275,1.275l6.5.122.122,6.5A1.309,1.309,0,0,0,9.36,19.012l.833.016A1.2,1.2,0,0,0,11.421,17.8L11.3,11.3l6.5.122a1.2,1.2,0,0,0,1.228-1.228l-.016-.832A1.31,1.31,0,0,0,17.737,8.085Z"
-              transform="translate(13.335 -0.239) rotate(45)" fill="#fff" />
-          </svg>
-        </div>
-        </div>
-        <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between"">
-         <div class = "d-flex align-items-center">
-         <div id="goBack" class="p-2">
-         <img src = "./assets/back.svg"> 
-        </div>
-        <div>
-        <span class = "mx-2 fw-semibold">New Chat</span>
-        </div>
+        <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between">
+            <div class = "d-flex align-items-center">
+            <div id="goBack" class="p-2">
+            <img src = "./assets/back.svg"> 
+            </div>
+            <div>
+            <span class = "mx-2 fs-5 fw-medium">New Chat</span>
+            </div>
          </div>
          <div class="dropdown">
           <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -281,15 +295,15 @@ $(document).ready(function () {
       </div>
       <div class="col-md-12 p-2 input-container bg-white">
         <div class ="d-flex align-items-center ">
-        <img src = "./assets/add.svg" class="mx-2">
-        <img src = "./assets/mic.svg" class="mx-2">
+        <button class = "btn p-2"><img src = "./assets/add.svg" ></button>
+        <button class = "btn p-2"><img src = "./assets/mic.svg" ></button>
         <div class = "w-100">
         <textarea rows={1} type="text" id="newmessage" class="message-input px-4 py-1" placeholder="Type your message!"
               style="font-size:18px;"></textarea>
             <input id="PromptResponse" name="PromptResponse" type="hidden" value="0" />
         </div>
         <div class="mx-2">
-        <img src="./assets/send.svg" />
+        <button class = "btn p-2"><img src="./assets/send.svg" /></button>
       </div>
         </div>
 
@@ -333,30 +347,30 @@ $(document).ready(function () {
 </div>
 
     <!-- Terms & Conditions -->
-    <div id="terms" class="chat-content position-relative" style="display:none">
+    <div id="terms" class="chat-view position-relative" style="display:none">
     <div class="row chat-header m-auto justify-content-between">
-        <div class="col-2 my-auto pl-1 back-container py-1">
-          <div id="goBack3" class="go-back">
-            <img src="../assets/arrow-left-white.png" class="arrow-left-white mr-1" />
-            <img src="../assets/arrow-left-yellow.png" class="arrow-left-yellow mr-1" />
-            <span class="mb-0">Go Back</span>
-          </div>
-        </div>
-        <div class="col-5 my-auto">
-          <span class="mb-0 chatbox-title">TERMS & CONDITIONS</span>
-        </div>
         <div class="row">
-          <div id="minimize4" class="text-right minimize-icon2 col-1">
-         <i class="fa fa-minus white" aria-hidden="true" ></i>
+        <div class = "d-flex align-items-center px-0 pt-2 justify-content-end">
+          <div id="minimize3" class="">
+          <img src = "./assets/max.svg">
           </div>
-          <div id="closeIcon4" class="col-1 my-auto close-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26.671" height="26.671" viewBox="0 0 26.671 26.671">
-              <path id="create-account"
-                d="M17.737,8.085l-6.5-.122-.122-6.5A1.309,1.309,0,0,0,9.837.185L9,.169A1.2,1.2,0,0,0,7.777,1.4L7.9,7.9,1.4,7.779A1.2,1.2,0,0,0,.169,9.006l.016.833a1.309,1.309,0,0,0,1.275,1.275l6.5.122.122,6.5A1.309,1.309,0,0,0,9.36,19.012l.833.016A1.2,1.2,0,0,0,11.421,17.8L11.3,11.3l6.5.122a1.2,1.2,0,0,0,1.228-1.228l-.016-.832A1.31,1.31,0,0,0,17.737,8.085Z"
-                transform="translate(13.335 -0.239) rotate(45)" fill="#fff" />
-            </svg>
+          <div id="minimize3" class="mx-2">
+          <img src = "./assets/mini.svg">
+          </div>
+          <div id="closeIcon3" class="">
+            <img src = "./assets/close.svg">
           </div>
         </div>
+        </div>
+        <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+        <div id="goBack3" class="p-2">
+        <img src = "./assets/back.svg">
+        </div>
+        <span class="mx-2 fs-5 fw-medium">Terms and Conditions</span>
+         </div>
+       </div>
+        
       </div>
       <div class="p-4">
         <h5 class="terms-title">Terms and Conditions</h5>
@@ -365,7 +379,7 @@ $(document).ready(function () {
     </div>
   </div>
 
-  <div class="hide-chat-box bot-icon justify-cotent-center float-right">
+  <div class="hide-chat-box bot-icon d-flex justify-content-center float-right align-items-center">
     <img id="botSvg" class="robotImage" src= alt="bot" />
     <svg xmlns="http://www.w3.org/2000/svg" width="26.671" height="26.671" viewBox="0 0 26.671 26.671" class="close-button">
     <path id="create-account"
@@ -732,16 +746,21 @@ function typeWriter(type = "HCT GPT") {
   if ("HCT GPT" == type) {
     div.innerHTML = `
     <div class="row message-container">
-      <div class="col-md-2 text-center">
-      <img  class="robot-image-sm robotImage"     src="data:image/jpeg;base64,${botIcon}" alt="robot" />
-
-        <p class="sender mb-0">${botName}</p>
+      <div class="col-md-1 text-center d-flex flex-column justify-content-start">
+      <img  class="robot-image-sm mx-2 mt-4 robotImage"     src="data:image/jpeg;base64,${botIcon}" alt="robot" />
       </div>
-      <div class="col-md-8 ml-2">
-        <div id="message">
-          <p class="mb-0 message-text" style="color:${botChatColor}" ></p>
-        </div>
+      <div class="col-md-10 ml-2">
+      <p class="sender mb-1">${botName}</p>
+       <div class = "d-flex">
+       <div id="message">
+       <p class="mb-0 message-text" style="color:${botChatColor}" ></p>
+       </div>
+       <div class  = " d-flex flex-column justify-content-start">
+       <button class = "btn"><img src = "./assets/copy.svg"/></button>
+       </div>
+       </div>
       </div>
+     
     </div>
     `; //robot
   } else {

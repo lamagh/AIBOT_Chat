@@ -1,3 +1,6 @@
+*{
+  font-family: 'Poppins';
+}
 .chat-main {
   position: absolute;
   width: 724px;
@@ -49,7 +52,7 @@
 }
 
 .chatbox-title {
-  font: normal normal bold 15px/20px Montserrat;
+  font: normal normal bold 15px/20px Poppins;
 }
 
 .close-button {
@@ -112,7 +115,7 @@
 .main-title {
   margin-top: 18px;
   margin-bottom: 30px;
-  font: normal normal bold 30px/39px Montserrat;
+  font: normal normal bold 30px/39px Poppins;
   text-transform: uppercase;
   color: #020A58;
 }
@@ -153,35 +156,22 @@
 }
 
 .robot-image-sm {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
 }
 
 .main-prev-chat {
   margin-bottom: 0;
-  font: bold 12px/20px Montserrat;
+  font: bold 12px/20px Poppins;
   color: #0744E1;
 }
 
 .main-new-ask {
   margin-bottom: 0;
-  font: normal normal bold 12px/20px Montserrat;
+  font: normal normal bold 12px/20px Poppins;
   color: white;
 }
 
-.chat-content:before {
-  content: "";
-  position: absolute;
-  bottom: -11px;
-  right: 30px;
-  height: 20px;
-  width: 20px;
-  background: #F6F8FF;
-  transform: rotate(45deg);
-  border-bottom: solid 1px #020A5866;
-  border-right: solid 1px #020A5866;
-  z-index: 9;
-}
 .login-btn {
   height: 56.424px;
   border-radius: 68px;
@@ -205,10 +195,21 @@
 
 .chat-content {
   background: #F6F8FF;
-  
   border-radius: 12px;
   margin-bottom: 14px;
   height: 500px;
+  position: fixed !important;
+    bottom: 150px;
+    width: 530px;
+    right: -108px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.chat-view{
+  background: #F6F8FF;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  height: 600px;
   position: fixed !important;
     bottom: 150px;
     width: 530px;
@@ -286,7 +287,7 @@
   z-index: 11 !important;
   resize: none;
   font-size: 15px !important;
-  font: normal normal 500 15px/22px Montserrat;
+  font: normal normal 500 15px/22px Poppins;
 	overflow: hidden;
 	box-sizing: border-box;
   overflow-y: auto;
@@ -302,11 +303,11 @@
 
 .terms {
   font-size: 15px !important;
-  font: normal normal 500 15px/22px Montserrat;
+  font: normal normal 500 15px/22px Poppins;
 }
 
 .terms-title {
-  font: normal normal bold 18px/39px Montserrat;
+  font: normal normal bold 18px/39px Poppins;
   color: #020A58 !important;
 }
 
@@ -317,8 +318,8 @@
 .chat-header {
   background: #9a9dbc 0% 0% no-repeat padding-box;
   color: #fff;
-  height: 70px;
-  border-radius: 22px 22px 0px 0px;
+  height: 80px;
+  border-radius: 12px 12px 0px 0px;
   width: 100%;
 }
 
@@ -327,7 +328,7 @@
 }
 
 .go-back {
-  font: normal normal bold 16px/39px Montserrat;
+  font: normal normal bold 16px/39px Poppins;
   width: 131px;
   cursor: pointer;
   padding-left: 14px;
@@ -349,7 +350,8 @@
 
 .sender {
   color: #020A58;
-  font: normal normal bold 12px/31px Montserrat;
+  font: 12px/25px Poppins;
+  font-weight: 600;
 }
 
 #message {
@@ -362,15 +364,15 @@
 
 #message>p {
   text-align: left;
-  font: normal normal 500 15px/22px Montserrat;
+  font: 400 15px/22px Poppins;
   letter-spacing: 0px;
-  color: #020A58;
+  color: #000;
   max-width: 498px;
   white-space: break-spaces;
 }
 
 .disclaimer {
-  font: normal normal 500 10px Montserrat;
+  font: normal normal 500 10px Poppins;
   color: #BB0000;
 }
 
@@ -384,8 +386,8 @@
 
 #message2>p {
   text-align: left;
-  font: normal normal 15px/22px Montserrat;
-  font-family: "Montserrat";
+  font: normal normal 15px/22px Poppins;
+  font-family: "Poppins";
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0px;
@@ -430,14 +432,15 @@
 .search-input {
   height: 50px;
   width: 100%;
-  padding-top: 20px !important;
+  padding-top: 6px !important;
   padding-bottom: 10px !important;
   padding-right: 14px !important;
-  padding-left: 30px !important;
-  border-radius: 12px;
-  border: 1px solid #020A5826 !important;
-  color: #020A58 !important;
-  font: normal normal bold 18px/39px Montserrat;
+  padding-left: 20px !important;
+  border-radius: 32px;
+  border: 1px solid #061349 !important;
+  color: #061349 !important;
+  font: 14px/39px Poppins;
+  background: transparent;
 }
 
 .search-input:focus-visible {
@@ -475,13 +478,13 @@
 }
 
 .chat-title {
-  font: normal normal bold 18px/39px Montserrat;
+  font: normal normal bold 18px/39px Poppins;
   color: #020A58;
 }
 
 .chat-date {
-  font: normal normal medium 15px/39px Montserrat;
-  font-family: "Montserrat";
+  font: normal normal medium 15px/39px Poppins;
+  font-family: "Poppins";
   font-weight: 500;
   font-size: 15px;
   color: #020A58;
@@ -529,11 +532,15 @@
   cursor: pointer;
   background: #a4a7c3 0% 0% no-repeat padding-box;
   border-radius: 22px;
-  font: normal normal bold 16px/39px Montserrat
+  font: normal normal bold 16px/39px Poppins
 }
 
 .chat-action-icon:hover {
   background: #b8bbd0 0% 0% no-repeat padding-box;
+}
+
+.blk{
+  filter: invert(0%) sepia(0%) saturate(40%) hue-rotate(311deg) brightness(0%) contrast(100%);
 }
 
 @media screen and (min-width: 1024px) {}
@@ -584,11 +591,11 @@
   }
 
   .main-new-ask {
-    font: normal normal bold 14px/14px Montserrat;
+    font: normal normal bold 14px/14px Poppins;
   }
 
   .main-title {
-    font: normal normal bold 18px/10px Montserrat;
+    font: normal normal bold 18px/10px Poppins;
   }
 
   .robot-image {
@@ -612,7 +619,7 @@
   }
 
   .search-input {
-    font: normal normal bold 11px/18px Montserrat;
+    font: normal normal bold 11px/18px Poppins;
   }
 
   .back-container {
@@ -620,7 +627,7 @@
   }
 
   #goBack2 {
-    font: normal normal bold 11px/39px Montserrat;
+    font: normal normal bold 11px/39px Poppins;
   }
 
   .search-img {
@@ -629,7 +636,7 @@
   }
 
   .chatbox-title {
-    font: normal normal bold 11px Montserrat;
+    font: normal normal bold 11px Poppins;
     white-space: nowrap;
   }
 }
@@ -655,7 +662,11 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5) {
   .chat-content{
-    max-height:420px !important;
+    max-height: 420px !important;
+    width: 540px !important;
+  }
+  .chat-view{
+    max-height:600px !important;
     width: 670px !important;
   }
   .main-terms {
@@ -701,10 +712,10 @@ font-size: 12px !important;
     height: 220px !important;
   }
   .chat-action-icon {
-    font: normal normal bold 15px/30px Montserrat;
+    font: normal normal bold 15px/30px Poppins;
   }
   .main-title{
-    font: normal normal bold 15px/20px Montserrat;
+    font: normal normal bold 15px/20px Poppins;
   }
 }
 
