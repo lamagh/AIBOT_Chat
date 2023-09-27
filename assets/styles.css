@@ -27,6 +27,12 @@
   background: #f6f8ff;
   border-radius: 23px;
   /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 .white{
   color: white;
@@ -39,17 +45,6 @@
   display: none;
 }
 
-#newQuestion:hover #sendIcon {
-  display: none;
-}
-
-#newQuestion:hover #sendIcon2 {
-  display: block;
-}
-
-#newQuestion:hover .main-new-ask {
-  color: #0744E1 !important;
-}
 
 .chatbox-title {
   font: normal normal bold 15px/20px Poppins;
@@ -81,30 +76,6 @@
   cursor: pointer;
 }
 
-.main-terms:hover p {
-  color: #FBBE2C;
-}
-
-.main-prev-chat:hover p {
-  color: #FBBE2C;
-}
-
-.main-prev-chat:hover .arrow-small {
-  display: none;
-}
-
-.main-prev-chat:hover .arrow-small-yellow {
-  display: block;
-}
-
-.main-terms:hover .arrow-small {
-  display: none;
-}
-
-.main-terms:hover .arrow-small-yellow {
-  display: block;
-}
-
 .main-help {
   margin-top: 45px;
 }
@@ -132,7 +103,9 @@
   /* height: 39px; */
   padding-top: 5px;
   padding-bottom: 5px;
+  
 }
+
 .botBorderButton{
   border-radius: 33px;
   border: 1px solid #0744E1;
@@ -173,22 +146,26 @@
 }
 
 .login-btn {
-  height: 56.424px;
+  height: 47px;
   border-radius: 68px;
   background-color: #0744e1;
   border-color: #0744e1;
   color: #fff;
   border: none;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .login-input {
   padding-right: 24px;
   padding-left: 30px;
-  height: 50px;
+  height: 45px;
   border-radius: 23px;
   border: 1px solid #020a5826;
   color: #020a58;
+}
+label{
+  font-size: 14px;
 }
 
 
@@ -253,9 +230,6 @@
   background-color: #1BADBA !important;
 }
 
-.bot-icon:hover {
-  background-color: #FBBE2C;
-}
 
 .send-icon {
   padding: 7px;
@@ -294,7 +268,7 @@
 }
 
 .login-view{
-  padding: 10px 30px;
+  padding: 33px 20px;
 }
 
 .main-view{
@@ -334,19 +308,6 @@
   padding-left: 14px;
 }
 
-.go-back:hover {
-  background: #5d6294 0% 0% no-repeat padding-box;
-  border-radius: 21px 21px 21px 0px;
-  color: #FBBE2C;
-}
-
-.go-back:hover .arrow-left-white {
-  display: none;
-}
-
-.go-back:hover .arrow-left-yellow {
-  display: inline;
-}
 
 .sender {
   color: #020A58;
@@ -447,26 +408,6 @@
   outline: unset;
 }
 
-.search-input-container:hover .search-input {
-  border: 1px solid #FBBE2C;
-  color: #FBBE2C;
-}
-
-.search-input-container:hover .search-input::placeholder {
-  color: #FBBE2C;
-}
-
-.search-input-container:hover .search-blue {
-  display: none;
-}
-
-.chat-list-item {
-  text-wrap: nowrap;
-}
-
-.search-input-container:hover .search-yellow {
-  display: block;
-}
 
 .prev-chat-container {
   border-bottom: 1px solid #020A5826;
@@ -495,21 +436,7 @@
   float: right;
 }
 
-.prev-chat-container:hover {
-  background: #FBBE2C26 0% 0% no-repeat padding-box;
-}
 
-.prev-chat-container:hover p {
-  color: #FBBE2C;
-}
-
-.prev-chat-container:hover .prev-chat-arrow-small {
-  display: none;
-}
-
-.prev-chat-container:hover .prev-chat-arrow-yellow {
-  display: block;
-}
 
 .search-img {
   position: absolute;
@@ -535,9 +462,7 @@
   font: normal normal bold 16px/39px Poppins
 }
 
-.chat-action-icon:hover {
-  background: #b8bbd0 0% 0% no-repeat padding-box;
-}
+
 
 .blk{
   filter: invert(0%) sepia(0%) saturate(40%) hue-rotate(311deg) brightness(0%) contrast(100%);

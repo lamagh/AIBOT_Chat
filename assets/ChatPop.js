@@ -142,7 +142,7 @@ $(document).ready(function () {
   <div id="container">
     <!-- Main Menu -->
     <div id="main" class="chat-content main-view position-relative" style="display:none">
-      <div class="main-container col-md-12 pt-3 pl-3 pr-3 pb-3">
+      <div class="main-container">
         <div class="">
           <div id="minimize" class="text-right minimize-icon col-1">
           <i class="fa fa-minus white" aria-hidden="true" ></i>
@@ -332,15 +332,15 @@ $(document).ready(function () {
       <img  class="robotImage" alt="robot" />
     </div>
  
-  <div  class="row mx-4 mt-5 px-5">
+  <div  class="row mx-4 mt-3 px-4">
     <label>Email Address</label>
     <input value="" type="email" class="w-100 login-input" id="userName"/>
   </div>
-  <div class="row mx-4 mt-4 px-5">
+  <div class="row mx-4 mt-4 px-4">
     <label>Password</label>
     <input value="" type="email" class="w-100 login-input" id="Password" />
   </div>
-  <div class="row mx-4 mt-4 px-5">
+  <div class="row mx-4 mt-4 px-4">
     <button class="w-100 login-btn" id="loginButton">Login</button>
   </div>
 
@@ -645,7 +645,7 @@ $(document).ready(function () {
           <img  class="robot-image-sm robotImage" alt="robot" />
             <p class="sender mb-0">HCT GPT</p>
           </div>
-          <div class="col-md-8 ml-2">
+          <div class="col-md-8 ml-3">
             <div id="message">
               <p class="mb-0 message-text">${message?.chatprompt}</p>
             </div>
@@ -749,7 +749,7 @@ function typeWriter(type = "HCT GPT") {
       <div class="col-md-1 text-center d-flex flex-column justify-content-start">
       <img  class="robot-image-sm mx-2 mt-4 robotImage"     src="data:image/jpeg;base64,${botIcon}" alt="robot" />
       </div>
-      <div class="col-md-10 ml-2">
+      <div class="col-md-10 ml-3">
       <p class="sender mb-1">${botName}</p>
        <div class = "d-flex">
        <div id="message">
