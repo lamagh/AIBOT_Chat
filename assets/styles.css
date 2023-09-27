@@ -699,7 +699,7 @@
     height: 346px;
   }
   .chats {
-    height: 290px;
+    height: 80%;
   }
   .terms {
 font-size: 12px !important;
@@ -709,7 +709,7 @@ font-size: 12px !important;
     margin-bottom: 20px;
   }
   .chats2 {
-    height: 220px !important;
+    height: 80% !important;
   }
   .chat-action-icon {
     font: normal normal bold 15px/30px Poppins;
