@@ -168,6 +168,11 @@ label{
   font-size: 14px;
 }
 
+.buttonDiv{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
 
 
 .chat-content {
@@ -178,7 +183,7 @@ label{
   position: fixed !important;
     bottom: 150px;
     width: 530px;
-    right: -108px;
+    right: -190px;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -190,7 +195,7 @@ label{
   position: fixed !important;
     bottom: 150px;
     width: 530px;
-    right: 22px;
+    right: -190px;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -199,7 +204,7 @@ label{
   overflow-x: hidden;
   position: relative;
   overflow-y: scroll;
-  height: 380px;
+  height: 450px;
 }
 
 .chats ul li {
@@ -382,7 +387,7 @@ label{
 
 .e-icon {
   height: 20px;
-  width: 22px;
+  width: 22px; 
 }
 
 .input-container {
@@ -403,6 +408,7 @@ label{
   color: #061349 !important;
   font: 14px/39px Poppins;
   background: transparent;
+  overflow:hidden;
 }
 
 .search-input:focus-visible {

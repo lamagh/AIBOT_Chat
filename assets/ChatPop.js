@@ -1,6 +1,6 @@
 ﻿var i = 0;
 var txt = "I am a GPT powered AI bot. How can i help you today?";
-var speed = 20;
+var speed = 1;
 var id = "";
 var prmptOld = "";
 var newChat = true;
@@ -125,9 +125,6 @@ $(document).ready(function () {
       if (0 == searchText.length) {
         return;
       }
-      // if (keycode == 13) {
-      //   $(".send-icon").click();
-      // }
       console.log("oi");
 
       searchRooms(searchText);
@@ -203,10 +200,11 @@ $(document).ready(function () {
           </div>
           <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between">
            <div class="d-flex align-items-center">
-           <div id="goBack2" class="p-2">
+           <div id="goBack2" class="p-2 buttonDiv">
            <img src = "./assets/back.svg">
-           </div>
+      
            <span class="mx-2 fs-5 fw-medium">Your Previous Chats</span>
+           </div>
             </div>
           </div>
        
@@ -254,11 +252,12 @@ $(document).ready(function () {
           </div>
         <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between">
             <div class = "d-flex align-items-center">
-            <div id="goBack" class="p-2">
-            <img src = "./assets/back.svg"> 
-            </div>
-            <div>
-            <span class = "mx-2 fs-5 fw-medium">New Chat</span>
+            <div id="goBack" class="p-2 buttonDiv">
+              <img src = "./assets/back.svg" /> 
+        
+              <div>
+              <span class = "mx-2 fs-5 fw-medium">New Chat</span>
+              </div>
             </div>
          </div>
          <div class="dropdown">
@@ -298,13 +297,13 @@ $(document).ready(function () {
         <button class = "btn p-2"><img src = "./assets/add.svg" ></button>
         <button class = "btn p-2"><img src = "./assets/mic.svg" ></button>
         <div class = "w-100">
-        <textarea rows={1} type="text" id="newmessage" class="message-input px-4 py-1" placeholder="Type your message!"
-              style="font-size:18px;"></textarea>
+        <input rows={1} type="text" id="newmessage" class="message-input px-4 py-1" placeholder="Type your message!"
+              style="font-size:18px;" />
             <input id="PromptResponse" name="PromptResponse" type="hidden" value="0" />
         </div>
         <div class="mx-2">
-        <button class = "btn p-2"><img src="./assets/send.svg" /></button>
-      </div>
+        <button id="sendMessage" class = "btn p-2"><img src="./assets/send.svg" /></button>
+        </div>
         </div>
 
 
@@ -364,10 +363,11 @@ $(document).ready(function () {
         </div>
         <div class="col-12 my-auto pl-1 py-1 d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
-        <div id="goBack3" class="p-2">
+        <div id="goBack3" class="p-2 buttonDiv">
         <img src = "./assets/back.svg">
-        </div>
+    
         <span class="mx-2 fs-5 fw-medium">Terms and Conditions</span>
+        </div>
          </div>
        </div>
         
@@ -673,7 +673,7 @@ $(document).ready(function () {
     $("#previousConversations").toggle();
   });
 
-  $("#chatMain").on("click", ".send-icon", function () {
+  $("#chatMain").on("click", "#sendMessage", function () {
     var ip = $("#newmessage").val();
     ip = ip.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     if (0 == ip.length) {
@@ -730,7 +730,7 @@ $(document).ready(function () {
       return;
     }
     if (keycode == 13 && $("#pendingResponse").val() != "0") {
-      $(".send-icon").click();
+      $("#sendMessage").click();
     }
     if (keycode == 13) {
       event.preventDefault();
@@ -785,7 +785,7 @@ function typeText() {
     var lastmessage = $(".message-container").find(".message-text").last();
     lastmessage.html(lastmessage.html() + txt.charAt(i));
     i++;
-    setTimeout(typeText, speed);
+    setTimeout(typeText, 0);
   } else {
     $("#pendingResponse").val(1);
   }
