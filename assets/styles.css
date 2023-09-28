@@ -175,7 +175,10 @@ label{
   flex-direction: row;
   cursor: pointer;
 }
-
+.robotImage{
+  width: 50px;
+  height: 50px;
+}
 
 .chat-content {
   background: #F6F8FF;
