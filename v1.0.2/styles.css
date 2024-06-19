@@ -1,0 +1,55 @@
+* {
+  font-family: "Poppins";
+}
+
+.chat-container {
+  background-color: #f8f9fa;
+  height: 100%;
+  width: 574px;
+  border-radius: var(--spacing-spacing-none, 0px);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.chat-box {
+  background-color: #f3fbff;
+  width: 574px;
+}
+
+.chat-header {
+  background-color: #061349;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.chat-sub-header {
+  border-radius: var(--spacing-spacing-none, 0px);
+  background: url("../assets/blue-bg.png"),
+    lightgray 0px 0px / 100% 112.821% no-repeat;
+  width: 1234.876px;
+  height: 86px;
+  flex-shrink: 0;
+}
+
+.chat-header-title {
+  color: var(--white, #fff);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.chat-input {
+  resize: none !important;
+  border-radius: 28px !important;
+  border: 1px solid var(--main, #0744e1) !important;
+}
+
+.chat-bot-bubble {
+  border-radius: 10px;
+  background: #f5f5f5;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
+}

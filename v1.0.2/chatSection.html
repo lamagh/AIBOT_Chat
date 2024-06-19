@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="./ChatPop.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <div class="position-fixed top-0 end-0 chat-container d-flex flex-column">
+      <div class="chat-header p-3">
+        <div class="row">
+          <div class="col-6">
+            <img src="../assets/filter.svg" class="cursor-pointer" />
+          </div>
+          <div class="col-6">
+            <img
+              src="../assets/close-bg.svg"
+              class="float-end ms-3 cursor-pointer"
+            />
+            <img
+              src="../assets/fullscreen.svg"
+              class="float-end cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="chat-sub-header p-3">
+        <div class="row">
+          <div class="col-6">
+            <img src="../assets/back-lg.svg" class="cursor-pointer me-2" />
+            <span class="chat-header-title">New Chat</span>
+          </div>
+          <div class="col-6">
+            <img
+              src="../assets/ellipsis-lg.svg"
+              class="float-end cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Content for the right-side div with left border -->
+      <div class="p-3 row h-100 chat-box ms-0">
+        <div class="row mt-auto">
+          <div class="col-2">
+            <img src="../assets/robot-icon.png" height="32" width="37" />
+          </div>
+          <div class="col-8">
+            <div class="chat-bot-bubble p-2">
+              <span>Hello! How can I assist you today?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input at the bottom of the chat container -->
+      <div class="p-3 row d-flex align-items-center mt-auto chat-footer">
+        <div class="col-3 text-center">
+          <img src="../assets/plus-lg.svg" class="me-2" />
+          <img src="../assets/mic-lg.svg" />
+        </div>
+        <div class="col-7">
+          <textarea class="form-control chat-input" rows="2"></textarea>
+        </div>
+        <div class="col-2">
+          <img src="../assets/send-lg.svg" />
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS and Popper.js (optional, but needed for some features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
