@@ -1,0 +1,406 @@
+.copyPaste {
+  margin: 0.5em;
+  width: 17px;
+  height: 14px;
+}
+#botHTML  h2 {
+  font-weight: bold;
+  font-size: 18px!important; /* You can set this to any size you prefer */
+}
+
+#botHTML  h3 {
+  font-weight: bold;
+  font-size: 16px!important; /* You can set this to any size you prefer */
+}
+.pingMessage {
+  -webkit-animation: cssAnimation 5s forwards;
+  animation: cssAnimation 5s forwards;
+}
+.displayColumn {
+  display: flex;
+}
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.text-link {
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+.pingMessage {
+  width: 180px;
+  height: 60px;
+  position: fixed;
+  bottom: 40px;
+  right: 160px;
+}
+.pingText {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #000;
+
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.aiIcon {
+  z-index: 10000000 !important;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 85px;
+  height: 85px;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.44));
+}
+.rightPanel {
+  z-index: 10000000 !important;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 574px;
+  max-width: 574px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.typingGif {
+  width: 50px;
+  height: 20px;
+}
+.chatHeader {
+  background-color: #061349;
+  width: 574px;
+  padding: 0.7em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chatBody {
+  background-color: #f3fbff;
+  width: 574px;
+  overflow-y: scroll;
+  padding: 0.2em;
+  height: 86vh;
+}
+.chatBottom {
+  background-color: rgb(255, 255, 255);
+  width: 574px;
+  padding: 0.5em 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+}
+.innerPanel {
+    height: 100vh;
+}
+
+.robotImage{
+  width: 70px;
+  height:70px;
+}
+.inputTextBox {
+  background-color: white;
+  border: 1px solid #0744e1;
+  border-radius: 28px;
+  height: 50px;
+  padding: 20px;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+.botChat,
+.botChatWaiting {
+  display: flex;
+  padding: 0.3em;
+  margin: 0.3em;
+}
+
+.chatIcon {
+  width: 35px;
+  height: 35px;
+  margin: 0.5em;
+}
+.waitingText,
+.chatText {
+  background-color: #edecec;
+  border-radius: 10px;
+  padding: 0.5em 0.7em;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
+  color: #000;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.responseText {
+  cursor: pointer;
+  background-color: #f1f4ff;
+  border-radius: 10px;
+  padding: 0.5em 0.7em;
+  margin: 0.5em;
+  max-width: 80%;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.chatQuestion {
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.3em;
+}
+.toCopy {
+  display: none;
+}
+.chatWrapper {
+  margin: 0.5em;
+  min-width: 20%;
+  max-width: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.botTitle {
+  color: #000;
+  margin: 5px 0px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 0px !important;
+}
+.ChatTitle {
+  color: #fff;
+
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+/* CSS rules for extra small devices */
+@media (min-width: 480px) and (max-width: 767px) {
+  .rightPanel {
+    width: 100vw;
+    max-width: unset !important;
+  }
+  .innerPanel {
+    width: 100vw;
+  }
+  .chatHeader {
+    width: 100vw;
+  }
+    .chatBody {
+        width: 100vw;
+    }
+  .chatBottom {
+    width: 100vw;
+  }
+  #sMesage img {
+    height: 75px;
+  }
+}
+
+.no-overflow {
+    overflow-y: hidden !important;
+}
+
+.overflowy {
+    overflow-y: scroll !important;
+}
+
+/* Mobile Phones (Portrait) */
+@media (max-width: 480px) {
+  .rightPanel {
+    width: 100vw;
+    max-width: unset !important;
+  }
+  .innerPanel {
+    width: 100vw;
+  }
+  .chatHeader {
+    /* width: 100vw; */
+    width: 100vw;
+    position:sticky;
+  }
+  .chatBody {
+    width: 100vw;
+    height: 80% !important;
+  }
+  .chatBottom {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+  }
+  #sMesage img {
+    height: 50px;
+  }
+    .pingMessage {
+        bottom: 17px;
+        right: 150px;
+    }
+  .aiIcon {
+    bottom: 20px;
+    right: 20px;
+  }
+  .pingText {
+    font-size: 14px;
+  }
+  .chatWrapper {
+    max-width: 80%;
+  }
+  .chatText {
+    width: 80%;
+  }
+}
+
+/* Mobile Phones (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .rightPanel {
+    width: 100vw;
+    max-width: unset !important;
+  }
+  .innerPanel {
+    width: 100vw;
+  }
+  .chatHeader {
+    width: 100vw;
+  }
+  .chatBody {
+    width: 100vw;
+  }
+  .chatBottom {
+    width: 100vw;
+  }
+  #sMesage img {
+    height: 75px;
+  }
+  .pingMessage {
+    width: 120px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+  }
+  .aiIcon {
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    right: 30px;
+  }
+  .pingText {
+    font-size: 15px;
+  }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .rightPanel {
+    width: 100vw;
+    max-width: unset !important;
+  }
+  .innerPanel {
+    width: 100vw;
+  }
+  .chatHeader {
+    width: 100vw;
+  }
+    .chatBody {
+        width: 100vw;
+    }
+  .chatBottom {
+    width: 100vw;
+  }
+  #sMesage img {
+    height: 75px;
+  }
+}
+
+/* Tablets (Landscape) */
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+  .rightPanel {
+    width: 100vw;
+    max-width: unset !important;
+  }
+  .innerPanel {
+    width: 100vw;
+  }
+  .chatHeader {
+    width: 100vw;
+  }
+  .chatBody {
+    width: 100vw;
+  }
+  .chatBottom {
+    width: 100vw;
+  }
+  #sMesage img {
+    height: 75px;
+  }
+  .pingMessage {
+    width: 140px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+  }
+  .aiIcon {
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 40px;
+  }
+  .pingText {
+    font-size: 16px;
+  }
+}

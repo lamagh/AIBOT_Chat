@@ -1,0 +1,81 @@
+<div class="toCopy botChat">
+  <img
+    class="chatIcon botIcon"
+    src="https://www.botfrontend.ctsdemo.ae/assets/robot-icon.png"
+  />
+  <div class="chatWrapper">
+    <div class="col-md-12 botTitle">AIDUCATOR</div>
+    <div class="displayColumn">
+      <div class="chatText"></div>
+
+      <img
+        id="CopyThisAnwser"
+        title="Copy Answer"
+        class="copyPaste"
+        src="https://www.botfrontend.ctsdemo.ae/assets/copyPaste.svg"
+      />
+    </div>
+  </div>
+</div>
+<div class="toCopy botChatWaiting">
+  <img
+    class="chatIcon botIcon"
+    src="https://www.botfrontend.ctsdemo.ae/assets/robot-icon.png"
+  />
+  <div class="chatWrapper">
+    <div class="col-md-12 botTitle"></div>
+    <div class="waitingText">
+      Typing
+      <img
+        class="typingGif"
+        src="https://www.botfrontend.ctsdemo.ae/assets/typingBlue.gif"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="toCopy chatQuestion">
+  <div class="responseText"></div>
+</div>
+
+<div class="pingMessage">
+  <img src="https://www.botfrontend.ctsdemo.ae/assets/Union.svg" />
+  <div class="pingText">Ping me to chat!</div>
+</div>
+<div id="ChatIcon" class="aiIcon" state="closed">
+  <img class="robot-image-sm mx-2 mt-4 robotImage" alt="robot" />
+</div>
+
+<div class="rightPanel" id="ChatPanel" style="display: none">
+  <div class="innerPanel">
+    <div class="chatHeader">
+      <div class="botTitle ChatTitle col-md-10"></div>
+      <button class="btn col-md-1" id="Minimize">
+        <img src="https://www.botfrontend.ctsdemo.ae/assets/mimiz.svg" />
+      </button>
+      <button class="btn col-md-1" id="closeX">
+        <img src="https://www.botfrontend.ctsdemo.ae/assets/closeX.svg" />
+      </button>
+    </div>
+    <div class="chatBody" id="ChatBody">
+      <div class="botChat">
+        <img
+          class="chatIcon botIcon"
+          src="https://www.botfrontend.ctsdemo.ae/assets/robot-icon.png"
+        />
+        <div class="chatText welcomeMessage"></div>
+      </div>
+    </div>
+    <div class="chatBottom">
+      <input
+        class="col-md-10 inputTextBox"
+        id="inputTB"
+        placeholder="Write a message ..."
+      />
+
+      <button class="btn col-md-2" id="sMesage">
+        <img src="https://www.botfrontend.ctsdemo.ae/assets/send.svg" />
+      </button>
+    </div>
+  </div>
+</div>
